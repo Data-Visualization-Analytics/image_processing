@@ -15,8 +15,10 @@ Steps to execute:<br />
 #This volume can be used as our output for the grayscale images
 6> ```docker run -d --name test -v image-vol:/image-processing/images/grayscale pipeline:latest``` <br />
 
-5> ```docker run pipeline-new``` <br />
+7> If you want to change the path you can edit the same in .env file
+
+8> ```docker run pipeline-new``` <br />
 
 #To see the processed files in local <br />
 
-6> ```docker cp <container_id>:path local_path``` <br />
+9> ```docker cp <container_id>:path local_path``` <br />

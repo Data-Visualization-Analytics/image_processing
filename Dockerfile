@@ -1,4 +1,4 @@
-FROM python:3.10.5-slim as builder
+FROM python:3.10.5-slim
 
 RUN pip3 --no-cache-dir install --upgrade awscli
 
@@ -13,4 +13,4 @@ COPY ./.env ./.env
 RUN mkdir -p ./images/grayscale ./images/validation ./download
 RUN python3 -m pip install -r requirements.txt
 
-ENTRYPOINT ["python","pipeline/project_image_processing/extract.py","pipeline/project_image_processing/transform.py","pipeline/project_image_processing/load.py"]
+CMD ["python","pipeline/project_image_processing/main.py"]
