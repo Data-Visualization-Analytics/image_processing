@@ -6,6 +6,7 @@ Steps to execute:<br />
 
 2> Clone the git repo <br />
 
+#If you want to run and check it in local machine
 3> Check if ./downlads and ./images folder are there if not create them <br />
 
 4> ```docker build -t pipeline-new``` <br />
