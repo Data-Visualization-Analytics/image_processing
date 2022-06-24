@@ -1,15 +1,22 @@
-# image_processing
-ETL pipeline for image processing
+# image_processing<br />
+ETL pipeline for image processing<br />
 
-Steps to execute:
-1> Install Docker
+Steps to execute:<br />
+1> Install Docker <br />
 
-2> Clone the git repo
+2> Clone the git repo <br />
 
-3> ```docker build -t pipeline-new```
+3> Check if ./downlads and ./images folder are there if not create them <br />
 
-4> ```docker run pipeline-new```
+4> ```docker build -t pipeline-new``` <br />
 
-#To see the processed files in local
+5> Create a docker volume i.e. images-vol <br />
 
-5> ```docker cp <container_id>:path local_path``` 
+#This volume can be used as our output for the grayscale images
+6> ```docker run -d --name test -v image-vol:/image-processing/images/grayscale pipeline:latest``` <br />
+
+5> ```docker run pipeline-new``` <br />
+
+#To see the processed files in local <br />
+
+6> ```docker cp <container_id>:path local_path``` <br />
