@@ -8,7 +8,7 @@ class Mapper():
     directory = config("processed_images_path")
 
     fnames = list(fname for fname in listdir(directory) if fname.endswith('.jpg'))
-
+    
     batchsize = 500
     l_index, r_index = 0, batchsize
     batch = fnames[l_index:r_index]
@@ -25,7 +25,3 @@ class Mapper():
             batchFunc(i) 
         l_index, r_index = r_index, r_index + batchsize
         batch = fnames[l_index:r_index]
-
-if __name__ == "__main__":
-    trans = Mapper()
-
