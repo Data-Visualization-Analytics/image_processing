@@ -12,4 +12,6 @@ COPY ./download ./download
 RUN mkdir -p ./images/grayscale ./images/validation ./download
 RUN python3 -m pip install -r requirements.txt
 
-CMD ["python","pipeline/project_image_processing/main.py"]
+CMD ["python","pipeline/project_image_processing/extract.py"]
+CMD ["python","pipeline/project_image_processing/transform.py"]
+CMD ["python","pipeline/project_image_processing/load.py"]
