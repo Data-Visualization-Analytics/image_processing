@@ -23,3 +23,7 @@ Steps to execute:<br />
 #To see the processed files in local <br />
 
 9> ```docker cp <container_id>:path local_path``` <br />
+
+#output snippits
+![image](https://user-images.githubusercontent.com/16240202/175788594-01067561-b3c8-42e1-8b61-15b3efecfdcd.png)
+
