@@ -1,4 +1,4 @@
-# image_processing<br />
+# Image Ingestion and Processing<br />
 ETL pipeline for image processing<br />
 
 Steps to execute:<br />
