@@ -13,4 +13,4 @@ COPY requirements.txt .
 
 RUN python3 -m pip install -r requirements.txt
 
-CMD ["python","-u","pipeline/project_image_processing/main.py"]
+CMD ["python","pipeline/project_image_processing/main.py"]
