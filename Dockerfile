@@ -5,7 +5,7 @@ WORKDIR /image-processing
 RUN apt-get update && apt-get install -y \
     curl \
     unzip \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 --no-cache-dir install --upgrade awscli
 
