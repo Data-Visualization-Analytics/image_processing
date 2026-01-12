@@ -2,9 +2,13 @@
 from os import listdir
 from PIL import Image
 from decouple import config
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logging.info("This is a test log")
 
 class Mapper():
-    print("Data transformation in process: \n")
+    logging.info("Data transformation in process: \n")
     directory = config("processed_images_path")
 
     fnames = list(fname for fname in listdir(directory) if fname.endswith('.jpg'))
@@ -18,7 +22,7 @@ class Mapper():
             img = Image.open('./images/validation/'+file)
             imgGray = img.convert('L')
             imgGray.save('./images/grayscale/'+file)
-            print(imgGray)
+            logging.info(imgGray)
 
     while batch:
         for i in batch:
