@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 --no-cache-dir install --upgrade awscli
 
 COPY requirements.txt .
+COPY ./pipeline ./pipeline
+COPY ./.env ./.env
 
 RUN python3 -m pip install -r requirements.txt
 
