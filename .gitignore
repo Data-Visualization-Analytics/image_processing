@@ -4,3 +4,4 @@ venv
 images
 download
 .idea
+.idea/*
