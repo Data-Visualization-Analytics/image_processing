@@ -3,3 +3,4 @@ venv
 *.tar.gz
 images
 download
+.idea
