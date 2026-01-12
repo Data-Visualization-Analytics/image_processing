@@ -15,4 +15,4 @@ COPY ./.env ./.env
 
 RUN python3 -m pip install -r requirements.txt
 
-CMD ["python","pipeline/project_image_processing/main.py"]
+CMD ["python","-u","pipeline/project_image_processing/main.py"]
